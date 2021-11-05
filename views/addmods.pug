@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  
+  - var row = Number(query.rows)
+  - var cl = Number(query.cols)
+   if row > 6
+       p number of row id out of range 
+   else if cl > 6
+       p number of col is out of range
+   else  
+      table(id="outer")
+        - for(let i=1; i <= row; i++) { 
+              tr
+                - for(let j=1; j<=cl; j++) {                 
+                      td #{(i+j) % j}
+                - }
+        - }   
+               

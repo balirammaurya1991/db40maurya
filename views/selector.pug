@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title} web apps 
+  script.
+       var image_names = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg"]    
+       for(let i=1; i < 4; i++) {
+             var imageindex = Math.floor(Math.random()*5) 
+             var imagename = image_names[imageindex]
+              console.log("**********************",imagename)
+              var img = document.createElement('img'); 
+              img.src = "/images/"+imagename; 
+              img.alt = imagename; 
+              document.querySelector('body').appendChild(img);
+        }  
