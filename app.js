@@ -24,6 +24,7 @@ var university = require('./routes/university');
 var addmods = require('./routes/addmods');
 var selector = require('./routes/Selector');
 var resource = require('./routes/resource');
+var costume = require('./routes/costumes')
 
 var app = express();
 
@@ -43,6 +44,7 @@ app.use('/university',university);
 app.use('/addmods',addmods);
 app.use('/selector',selector);
 app.use('/resource',resource);
+app.use('/costume',costume)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
