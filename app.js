@@ -5,8 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var Costume = require("./models/costume"); 
 // database connection
-const connectionString =  
-process.env.MONGO_CON
+const connectionString = process.env.MONGO_CON
 mongoose = require('mongoose'); 
 mongoose.connect(connectionString,  
 {useNewUrlParser: true, 
