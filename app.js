@@ -64,7 +64,7 @@ app.use(function(err, req, res, next) {
 // We can seed the collection if needed on 
 async function recreateDB(){ 
   // Delete everything 
-  await Costume.deleteMany();  
+  //await Costume.deleteMany();  
   let instance1 = new 
 Costume({costume_type:"coat",  size:'large', 
 cost:25.4}); 
