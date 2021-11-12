@@ -19,8 +19,7 @@ router.post('/resource/costumes', costume_controller.costume_create_post);
 router.delete('/resource/costumes/:id', costume_controller.costume_delete); 
  
 // PUT request to update Costume. 
-router.put('/resource/costumes/:id', 
-costume_controller.costume_update_put); 
+router.put('/resource/costumes/:id',costume_controller.costume_update_put); 
  
 // GET request for one Costume. 
 router.get('/resource/costumes/:id', costume_controller.costume_detail); 
