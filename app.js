@@ -22,7 +22,7 @@ var Costume = require("./models/costume");
 // database connection
 const connectionString = process.env.MONGO_CON
 mongoose = require('mongoose'); 
-mongoose.connect('mongodb+srv://s545140:Baliram660528@cluster0.xb6yi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',  
+mongoose.connect(connectionString,  
 {useNewUrlParser: true, 
 useUnifiedTopology: true});
  
