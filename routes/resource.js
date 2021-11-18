@@ -23,6 +23,7 @@ router.put('/resource/costumes/:id',costume_controller.costume_update_put);
  
 // GET request for one Costume. 
 router.get('/resource/costumes/:id', costume_controller.costume_detail); 
+
  
 // GET request for list of all Costume items. 
 router.get('/resource/costumes', costume_controller.costume_list); 
