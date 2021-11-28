@@ -21,9 +21,9 @@ router.get('/costumes/:id', costume_controllers.costume_detail);
 /* GET detail costume page */ 
 router.get('/detail', detail_controller.costume_view_one_Page); 
 /* GET create costume page */ 
-router.get('/create', createcostume_controller.costume_create_Page);
+router.get('/create', secured,createcostume_controller.costume_create_Page);
 /* GET create update page */ 
 router.get('/update', secured, costumeupdate_controller.costume_update_Page); 
 /* GET create costume page */ 
-router.get('/delete', costume_controllers.costume_delete_Page); 
+router.get('/delete',secured, costume_controllers.costume_delete_Page); 
  

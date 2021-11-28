@@ -1,7 +1,7 @@
 const mongoose = require("mongoose") 
 const costumeSchema = mongoose.Schema({ 
  costume_type: String, 
- size: String, 
+ size: {type: String, maxlength: 6}, 
  cost:{ type: Number, min: 5, max: 32 }
 },{
     writeConcern: {
