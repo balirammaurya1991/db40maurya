@@ -1,16 +1,12 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title} web apps
-  button(type="button", class="btn btn-secondary", onclick="update()") Press me 
-  div(id="target")
-  script. 
-       var client_count = 0
-       function update(){  
-          //console.log("***************************")
-          client_count = client_count+1
-          document.getElementById("target").innerHTML = client_count
-        
-          }
-  a(href="https://db40maurya.herokuapp.com/university") search result          
+extends layout 
+ 
+block content 
+  if (!user) 
+    a(href="/login") Login 
+    br 
+    a(href="/register") Register 
+  if (user) 
+    p You are currently logged in as #{user.username} 
+    a(href="/costume") Take me to costumes 
+    br 
+    a(href="/logout") Logout 
